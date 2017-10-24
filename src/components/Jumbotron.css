@@ -1,0 +1,7 @@
+.jumbotron {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  transform: translateX(390px);
+  z-index: -1;
+}
