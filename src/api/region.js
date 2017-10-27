@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-fetch';
 import axios from 'axios';
 
 const API_KEY = 'AIzaSyBUjtEW9N9z6MKywjHlwHB9F99Xc6sUjK0';

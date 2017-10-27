@@ -31,7 +31,7 @@ const Holiday = (props) => {
       <CardActions>
         <DatePicker
           className="pl-2"
-          minDate={moment().startOf('year').toDate()}
+          minDate={moment(holidays[0]['Date']).startOf('year').toDate()}
           maxDate={moment(holidays[holidays.length-1]['Date']).toDate()}
           hintText="Change the date here ;)"
           autoOk={true}
