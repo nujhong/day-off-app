@@ -4,4 +4,4 @@
 I've always missed out free parking on public holidays... NOT ANYMORE.
 
 [DEMO](https://thawing-forest-61141.herokuapp.com/)
-[![Heroku](http://heroku-badge.herokuapp.com/?app=day-off-app&style=flat)]
+![Heroku](http://heroku-badge.herokuapp.com/?app=day-off-app&style=flat)
