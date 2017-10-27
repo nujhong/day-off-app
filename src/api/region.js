@@ -1,4 +1,7 @@
+import fetch from 'isomorphic-fetch';
 import axios from 'axios';
+
+const API_KEY = 'AIzaSyBUjtEW9N9z6MKywjHlwHB9F99Xc6sUjK0';
 
 export function getRegion() {
   // navigator.geolocation.getCurrentPosition(function(location) {
@@ -6,11 +9,12 @@ export function getRegion() {
   //   console.log(location.coords.longitude);
   //   console.log(location.coords.accuracy);
   // });
-
-  return axios.get('http://ip-api.com/json')
+  return axios
+    .post('https://www.googleapis.com/geolocation/v1/geolocate?key=' + API_KEY)
     .then(res => {
-      console.log(res);
-      return res.data.region;
+      const { lat, lng } = res.data.location;
+      return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${API_KEY}&result_type=administrative_area_level_1`)
     })
-    .catch(err => { return Promise.reject(err); });
+    .then(res => res.data.results[0].address_components[0].short_name)
+    .catch(err => Promise.reject(err));
 };
