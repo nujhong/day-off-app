@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getRegion } from './region';
 
 // https://data.gov.au/dataset/australian-holidays-machine-readable-dataset
-const RESOURCE = 'a24ecaf2-044a-4e66-989c-eacc81ded62f';
+const RESOURCE = '31eec35e-1de6-4f04-9703-9be1d43d405b';
 
 export function getHolidays() {
   return getRegion()

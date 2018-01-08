@@ -18,7 +18,7 @@ const Holiday = (props) => {
   return (
     <Card className='Holiday'>
       <AppBar
-        title="Day off ?"
+        title="Holiday Calendar"
         iconElementLeft={<IconButton><ActionDateRange /></IconButton>}
       />
       <CardHeader
